@@ -2,6 +2,9 @@
 body{
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 /* styling menu icon */
 .nav-menu{
@@ -384,3 +387,36 @@ footer .link-group a:hover{
     color: #fff;
     animation: pulse 3s infinite;
 }
+/* General Media Query to Fix Spacing for Smaller Screens */
+@media only screen and (max-width: 768px) {
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+  
+    section {
+      padding: 20px 10px;
+    }
+  
+    .row {
+      margin: 0;
+    }
+  
+    .card {
+      margin: 10px 0;
+    }
+  
+    /* Remove potential white space due to negative margins or flex gaps */
+    .container, .row, .col-md-5, .col-10 {
+      max-width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  
+    .modal-dialog {
+      max-width: 100%;
+      margin: auto;
+    }
+  }
+  
