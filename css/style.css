@@ -389,34 +389,36 @@ footer .link-group a:hover{
 }
 /* General Media Query to Fix Spacing for Smaller Screens */
 @media only screen and (max-width: 768px) {
-    body {
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-    }
-  
-    section {
-      padding: 20px 10px;
-    }
-  
-    .row {
-      margin: 0;
-    }
-  
-    .card {
-      margin: 10px 0;
-    }
-  
-    /* Remove potential white space due to negative margins or flex gaps */
-    .container, .row, .col-md-5, .col-10 {
-      max-width: 100%;
-      padding-left: 0;
-      padding-right: 0;
-    }
-  
-    .modal-dialog {
-      max-width: 100%;
-      margin: auto;
-    }
+   /* General layout fixes for all screen sizes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
   
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .container, .row, .col-md-5, .col-10 {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+  }
+  
+  section {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .card {
+    margin: 0 auto;
+  }
+  
+  /* Additional Reset */
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }}
